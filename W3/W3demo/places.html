@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #wrapper {
+        background-color: lightgray;
+    }
+
+    .bg {
+        background-color: black;
+        color: white;
+        text-align: center;
+    } 
+    
+</style>
+<body>
+    <div id="wrapper">
+
+    </div>
+
+    <div id="header" class="border bg">
+        <h1 id="title" class="fancy">Joel Miller</h1>
+        <h2 class="fancy"><i>from HBO's The Last of Us</i></h2>
+
+
+    </div>
+
+    <div id="nav">
+        <!--Internal page links-->
+        <!--RELATIVE FILE PATHS-->
+        <a href="index.html">[HOME]</a>
+        <a href="people.html">[PEOPLE]</a>
+        <a href="places.html">[PLACES]</a>
+        <br>
+
+        <a href="#footer">[JUMP TO FOOTER]</a>
+        <!--internal Jump links: using #fragments-->
+        <br>
+        <!--external links (go outside the page)-->
+        <!--Absolute paths (includes protocol, domain, + sub-dr)-->
+        <a href="https://www.hbo.com/the-last-of-us/" target="_blank">Visit the Official HBO site</a>
+
+    </div>
+
+    <div id="content">
+        <h2 class="border">[PLACES]</h2>
+
+    </div>
+
+    <div id="footer" class="border bg">
+
+        <a href="#header">JUMP TO TOP</a>
+        <p>&copy; [ Z LEBLOND ] [ SE111 ] [ 202420 ]</p>
+
+
+    </div>
+</body>
+</html>

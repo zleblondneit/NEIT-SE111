@@ -14,33 +14,12 @@
 </style>
 <body>
     
-    <h1>Basic Form Demo</h1>
-
-    <form>
-
-        <!--labels are used to match with input elements-->
-        <!--'for' attribute connects labels with the input values (matching 'name' atttribute value)-->
-
-        <label for="firstName">First Name: </label>
-        <input type="text" name="firstName" id="firstName">
-
-        <br>
-
-        <label for="lastName">Last Name: </label>
-        <input type="text" name="lastName" id="lastName">
-
-        <br>
-
-        <label for="age">Age: </label>
-        <input type="text" name="age" id="age">
-
-
-    </form>
+   
 
     <hr>
 
 
-    <h2>Form using a Table</h2>
+    <h2>Blind Tiger Intake form</h2>
 
     <form method="GET" action=""> <!--run confirm.html-->
 
@@ -48,6 +27,25 @@
 
             <!--thead - not required but nice to have; column headers-->
             <thead>
+
+                <tr>
+                    <td>
+                        <h2>Basic Information</h2>
+                        
+
+
+                    </td>
+                
+
+
+                
+                    <td>
+                        
+
+
+                    </td>
+
+                </tr>
 
                 <!--New row-->
                 <tr>
@@ -76,30 +74,21 @@
 
                     <!--first column - LABEL -->
                     <td>
-                        <label for="fName">First Name:</label>
+                        <label for="fName">Patients Full Name:</label>
                     </td>
 
                     <!--second column- INPUT -->
                     <td>
                         <input type="text" name="fName" id="fName" placeholder="First name here">
+                        <br>
+
+                        <input type="text" name="lName" id="lName" placeholder="Last name here">
                     </td>
 
                 </tr>
 
                 <!--Table Row-->
-                <tr>
-
-                    <!--first column - LABEL -->
-                    <td>
-                        <label for="lName">Last Name:</label>
-                    </td>
-
-                    <!--second column- INPUT -->
-                    <td>
-                        <input type="text" name="lName" id="lName" placeholder="Last name here">
-                    </td>
-
-                </tr>
+                
 
                 <!--Table Row-->
                 <tr>
@@ -117,19 +106,7 @@
                 </tr>
 
                 <!--SUBMIT BUTTON (is this correct?)-->
-                <tr>
-                
-                    <td>
-                        <label for="comments">Comments: </label>
-                    </td>
-                
-
-                
-                    <td>
-                        <textarea name="comments" id="comments">Leave comments here...</textarea>
-                    </td>
-                    
-                </tr>
+               
 
                 <tr>
                     <!--Drop down menu-->
@@ -140,7 +117,7 @@
 
                 
                     <td>
-                        <select name="favcolor" id="favcolor">
+                        <select name="favcolor" type="color">
 
                             <option value="r">RED</option>
                             <option value="g">GREEN</option>
@@ -152,22 +129,41 @@
                 </tr>
 
                 <tr>
+                    <td>
+                        <h2>Basic Appointment Information</h2>
+                        
+
+
+                    </td>
+                
+
+
+                
+                    <td>
+                        
+
+
+                    </td>
+
+                </tr>
+
+                <tr>
                     <!--RADIO BUTTONS-->
                     <td>
 
-                    <label for="study">Program of Study:</label>
+                    <label for="study">Requested Practitioner:</label>
 
                     </td>
                 
 
                 <td>
-                    <input type="radio" name="study" id="study1" value="SE">Software Engineering
+                    <input type="radio" name="study" id="study1" value="SE">Ashley Martin
                     <br>
 
-                    <input type="radio" name="study" id="study2" value="GD">Game Design
+                    <input type="radio" name="study" id="study2" value="GD">Troy Martin
                     <br>
 
-                    <input type="radio" name="study" id="study3" value="T">Therapy
+                    <input type="radio" name="study" id="study3" value="T">Jarrod Martin
 
                 </td>
 
@@ -176,31 +172,33 @@
                 <tr>
                     <!--CHECKBOX BUTTONS (needs label for all options)-->
                     <td>
-                        <label>Select your vehical(s)</label>
+                        <label>What Procedure(s):</label>
                     
 
                     </td>
                 
 
                 <td>
-                    <input type="checkbox" name="car1" value="car"><label for="car1">BMW</label>
+                    <input type="checkbox" name="car1" value="car"><label for="car1">Horizontal Lines</label>
                     <br>
-                    <input type="checkbox" name="car2" value="car"><label for="car2">Honda</label>
+                    <input type="checkbox" name="car2" value="car"><label for="car2">Crows Feet</label>
                     <br>
-                    <input type="checkbox" name="car3" value="car"><label for="car3">Subaru</label>
+                    <input type="checkbox" name="car3" value="car"><label for="car3">Bunny Lines</label>
                     <br>
-                    <input type="checkbox" name="car4" value="car"><label for="car4">Fortnite</label>
+                    <input type="checkbox" name="car4" value="car"><label for="car4">Neck Lines</label>
                     <br>
-                    <input type="checkbox" name="car5" value="car"><label for="car5">i walk everywhere</label>
+                    <input type="checkbox" name="car5" value="car"><label for="car5">Jaw Reduction</label>
                     <br>
-                    <input type="checkbox" name="car6" value="car"><label for="car6">Joshua French</label>
+                    <input type="checkbox" name="car6" value="car"><label for="car6">I am not sure yet</label>
                    
                 </td>
+                
+                    
 
                 <tr>
                     <!--CHECKBOX BUTTONS (needs label for all options)-->
                     <td>
-                        <label for="date">Date;</label>
+                        <label for="date">Request Date for procedure:</label>
                     
 
                     </td>
@@ -212,10 +210,109 @@
                    
                 </td>
 
+                </tr>
 
+                <td>
+                    <label for="favcolor">How many visitors?</label>
+                </td>
+            
+
+            
+                <td>
+                    <select name="favcolor" type="color">
+
+                        <option value="z">0</option>
+                        <option value="r">1</option>
+                        <option value="g">2</option>
+                        <option value="b">3</option>
+                        <option value="c">4</option>
+
+                    </select>
+                </td>
+                
+            </tr>
 
                 </tr>
 
+                <tr>
+                    <td>
+                        <h2>Additional Comments</h2>
+                        
+
+
+                    </td>
+                
+
+
+                
+                    <td>
+                        
+
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p>How did you find us?</p>
+                        
+
+
+                    </td>
+
+                    
+                
+                     
+
+                
+                    <td>
+                        
+                        <textarea name="comments1" id="comments1">enter answer here</textarea>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!--RADIO BUTTONS-->
+                    <td>
+
+                    <label for="study">Would you like to be entered into a raffle?:</label>
+
+                    </td>
+                
+
+                <td>
+                    <input type="radio" name="study" id="study1" value="SE">Yes!
+                    <br>
+
+                    <input type="radio" name="study" id="study2" value="GD">No thank you.
+                    <br>
+
+                   
+
+                </td>
+
+                <tr>
+                    <td>
+                        <h2>Thank you!</h2>
+                        
+
+
+                    </td>
+                
+
+
+                
+                    <td>
+                        
+
+
+                    </td>
+
+                </tr>
+
+                </tr>
                 <!--left column-->
                 <tr>
                     <td>

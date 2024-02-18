@@ -8,19 +8,27 @@
 <body>
     <script>
         
-        var firstnum = prompt("Enter first number here: ")
+        var hoursworked = prompt("How many hours did you work?: ")
 
+        hoursworked= Number(hoursworked)
+
+        var wage = prompt("How much are you paid hourly?:  ")
+
+        wage= Number(wage)
+
+        totalpay = wage * hoursworked
+
+        tax = totalpay * 0.2
+
+        tax= Number(tax)
+
+        finaltotalpay = totalpay - tax
+
+        finaltotalpay= Number(finaltotalpay)
+
+        alert(`Total pay is: \n${totalpay}\nAmount taxed is: \n${tax}\nAmount after taxes taken out: \n${finaltotalpay}`);
         
-
-        var secondnum = prompt("Enter second number here: ")
-
-        var total = firstnum + secondnum
-
-        alert(`The sum is: \n${total}`)
-
-       
-
-
     </script>
 </body>
+
 </html>

@@ -106,47 +106,105 @@
         //write JS in here
 
         //PART1-----selecting and storing HTML elements------------
-        /*
-            declare names for each of the following elements in the document: body, h1, input, div, input buttons
+        
+            //declare names for each of the following elements in the document: body, h1, input, div, input buttons
 
-            use EITHER .querySelector() OR .getElementById
+            
 
-            console.log() all of these elements once complete
+            //use EITHER .querySelector() OR .getElementById
 
-        */
+            var body1 = document.querySelector("body")
+            var h11 = document.querySelector("h1")
+            var enter = document.getElementById("enter-button")
+            var hrs = document.getElementById("hours")
+            var rat = document.getElementById("rate")
+            var fname = document.getElementById("first")
+            var lname = document.getElementById ("last")
+            var con = document.getElementById ("confirm-button")
+            var tax = 0.07
+            //console.log() all of these elements once complete
+            console.log(enter)
+            console.log(h11)
+            console.log(body1)
+            console.log(hrs)
+            console.log(rat)
+            console.log(fname)
+            console.log(lname)
+            console.log(con)
+
+        
 
         //PART2------adding event listeners------------------------
-        /*
-            add an event listener to the #enter-button that runs a function called "formData"
+        
+            //add an event listener to the #enter-button that runs a function called "formData"
 
-            add an event listener to the #confirm-button that runs a function called "confirmForm"
-        */
+            enter.addEventListener("click", formData)
 
+            //add an event listener to the #confirm-button that runs a function called "confirmData"
+        
+            
 
         //PART3------building event functions----------------------
-        /*
-            formData() instructions: 
-                -store the input element values to descriptive names
-                -declare and create a "fullName" using the first and last values
-                -declare and create: grossPay, taxAmount, netPay
-                -console.log() the 4 values: fullName, grossPay, taxAmount, netPay
-                -write the information, with bolded labels in paragraph elements, to the #info div's innerHTML
-                -ensure all monetary values are displayed to the second decimal place (.toFixed(2))
-
-                    HINT EX: `<p><b>Full Name:</b> ${fullName}`
-
-                REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
-
-
-            confirmForm() instructions:
-                -store the input element values to descriptive names
-                -declare and create a "fullName" using the first and last values
-                -declare and create: grossPay, taxAmount, netPay
-                -display all information (fullName, grossPay, taxAmount, netPay) to the user using ONE alert()
-                -each value should be on its own line (use `\n`) and ensure all monetary values are displayed to the second decimal place (.toFixed(2))
+        
+            //formData() instructions: 
+                //-store the input element values to descriptive names
+                function formData (event) {
+                
                 
 
-        */
+                    var fullName = fname.value + "" + lname.value;
+                
+
+                    var grossPay =  hrs.value * rat.value;
+               
+
+                    var taxAmount = grossPay / tax;
+                
+
+                    var netPay =  grossPay - taxAmount;
+            
+
+                    console.log(fullName)
+
+                    console.log(grossPay)
+
+                    console.log(taxAmount)
+
+                    console.log(netPay)
+                
+                    var info = document.querySelector(`#info`);
+
+                    info.innerHTML = `<p><b>Full Name:</b> ${fullName}`;
+                    info.innerHTML += `<p><b>Gross Pay:</b> ${grossPay.toFixed(2)}`;
+                    info.innerHTML += `<p><b>Tax Taken:</b> ${taxAmount.toFixed(2)}`;
+                    info.innerHTML += `<p><b>Total Pay:</b> ${netPay.toFixed(2)}`;}
+
+
+                
+
+                
+
+                
+                    //-declare and create a "fullName" using the first and last values
+                    //-declare and create: grossPay, taxAmount, netPay
+                    //-console.log() the 4 values: fullName, grossPay, taxAmount, netPay
+                    //-write the information, with bolded labels in paragraph elements, to the #info div's innerHTML
+                    //-ensure all monetary values are displayed to the second decimal place (.toFixed(2))
+
+                   // HINT EX: `<p><b>Full Name:</b> ${fullName}`
+
+                    //REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
+
+
+                 //confirmForm() instructions:
+                //-store the input element values to descriptive names
+                //-declare and create a "fullName" using the first and last values
+                //-declare and create: grossPay, taxAmount, netPay
+                //-display all information (fullName, grossPay, taxAmount, netPay) to the user using ONE alert()
+                //-each value should be on its own line (use `\n`) and ensure all monetary values are displayed to the second decimal place (.toFixed(2))
+                
+
+        
        function formData(event)
        {
             //EXTRA CREDIT---------+5pts-------------------------------

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.red{border:1px solid green;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Joshua", last:"French", credit:"New England Tech" },
+		{first:"Walter", last:"White", credit:"Breaking Bad" },
+		{first:"V1", last:"N/A", credit:"ULTRAKILL" }
+	]
+
+		console.log(people)  //can view the entire array and its values
+        console.log(people[0]) //views indecies more in-depth
+
+        console.log(people[0].last) //specific value
+
+
+        //seleect main element of document that holds content (body)
+        var body = document.querySelector(`body`)
+
+        console.log(body)  //see the full value stored to the name
+        console.dir(body)  //see the value in its object state (properties & values)
+
+        //FIRST for every value (object) in the array: create a div, give it a unique ID, and assign it to the class of "red"; THEN for every property in the object, create a <p> to hold the value content; FINALLY add the <p> to the <div>, then add the <div> to the <body>
+
+            for (let i = 0; i < people.length; i++)
+            {
+                //create a div element
+                var tempDiv = document.createElement(`div`)
+
+                //assign a unique ID to the div; then assign it to the "red" class
+                tempDiv.setAttribute(`id`, people[i].first)
+                tempDiv.setAttribute(`class`, `red`)
+                
+                for (let key in people[1])
+                {
+                    //create a <p> for each property 
+                    var p = document.createElement(`p`)
+                    var text = document.createTextNode(people[i][key])
+
+                    //add the text to the p
+                    p.appendChild(text)
+                    tempDiv.appendChild(p)
+                }
+
+                //add tempdiv to body element
+                body.appendChild(tempDiv)
+            }
+	
+</script>
+
+</html>
